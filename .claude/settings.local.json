@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npx prisma *)",
+      "Bash(npx shadcn@latest add accordion card badge separator input textarea select label form navigation-menu sheet dialog)",
+      "Bash(mkdir -p \\\\ *)"
+    ],
+    "additionalDirectories": [
+      "/Users/macbook/Documents/DEV/tech_service/abcox/src/app/(marketing)/servicios"
+    ]
+  }
+}

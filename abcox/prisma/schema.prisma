@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model ContactSubmission {
+  id            String   @id @default(cuid())
+  name          String
+  phone         String
+  email         String
+  commune       String
+  brand         String
+  equipmentType String
+  problem       String   @db.Text
+  status        Status   @default(PENDING)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("contact_submissions")
+}
+
+model Testimonial {
+  id         String   @id @default(cuid())
+  name       String
+  commune    String
+  rating     Int
+  comment    String   @db.Text
+  isApproved Boolean  @default(false)
+  createdAt  DateTime @default(now())
+
+  @@map("testimonials")
+}
+
+model FAQ {
+  id       String  @id @default(cuid())
+  question String
+  answer   String  @db.Text
+  order    Int     @default(0)
+  isActive Boolean @default(true)
+
+  @@map("faqs")
+}
+
+enum Status {
+  PENDING
+  CONTACTED
+  SCHEDULED
+  COMPLETED
+  CANCELLED
+}
