@@ -2,7 +2,7 @@
 
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { toast } from "sonner"
+import { MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -15,8 +15,8 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { contactSchema, type ContactFormData } from "@/lib/validations/contact.schema"
-import { submitContact } from "@/actions/contact"
 import { brands } from "@/config/brands"
+import { siteConfig } from "@/config/site"
 
 const communes = [
   "Cerrillos", "Cerro Navia", "Conchalí", "El Bosque", "Estación Central",
@@ -33,24 +33,26 @@ export function ContactForm() {
     register,
     handleSubmit,
     setValue,
-    reset,
     formState: { errors, isSubmitting },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   })
 
-  const onSubmit = async (data: ContactFormData) => {
-    const result = await submitContact(data)
-    if (result.success) {
-      toast.success("¡Solicitud enviada!", {
-        description: "Te contactaremos en menos de 2 horas hábiles.",
-      })
-      reset()
-    } else {
-      toast.error("Error al enviar", {
-        description: result.error,
-      })
-    }
+  const onSubmit = (data: ContactFormData) => {
+    const text = [
+      "Hola ABCOX, quiero solicitar un presupuesto:",
+      "",
+      `Nombre: ${data.name}`,
+      `Teléfono: ${data.phone}`,
+      `Email: ${data.email}`,
+      `Comuna: ${data.commune}`,
+      `Equipo: ${data.equipmentType}`,
+      `Marca: ${data.brand}`,
+      `Problema: ${data.problem}`,
+    ].join("\n")
+
+    const phone = siteConfig.whatsapp.replace(/\D/g, "")
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, "_blank")
   }
 
   return (
@@ -133,8 +135,14 @@ export function ContactForm() {
         {errors.problem && <p className="text-xs text-red-500">{errors.problem.message}</p>}
       </div>
 
-      <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
-        {isSubmitting ? "Enviando..." : "Enviar solicitud"}
+      <Button
+        type="submit"
+        size="lg"
+        className="w-full bg-green-500 hover:bg-green-600"
+        disabled={isSubmitting}
+      >
+        <MessageCircle className="mr-2 h-5 w-5" />
+        Solicitar por WhatsApp
       </Button>
     </form>
   )
