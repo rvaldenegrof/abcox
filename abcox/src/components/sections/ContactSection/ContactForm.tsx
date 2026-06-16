@@ -19,13 +19,9 @@ import { brands } from "@/config/brands"
 import { siteConfig } from "@/config/site"
 
 const communes = [
-  "Cerrillos", "Cerro Navia", "Conchalí", "El Bosque", "Estación Central",
-  "Huechuraba", "Independencia", "La Cisterna", "La Florida", "La Granja",
-  "La Pintana", "La Reina", "Las Condes", "Lo Barnechea", "Lo Espejo",
-  "Lo Prado", "Macul", "Maipú", "Ñuñoa", "Pedro Aguirre Cerda",
-  "Peñalolén", "Providencia", "Pudahuel", "Quilicura", "Quinta Normal",
-  "Recoleta", "Renca", "San Joaquín", "San Miguel", "San Ramón",
-  "Santiago", "Vitacura",
+  "Quilpué", "Villa Alemana", "Viña del Mar", "Valparaíso", "Concón",
+  "Limache", "Olmué", "Peñablanca", "Casablanca", "Quillota",
+  "La Calera", "Hijuelas",
 ]
 
 export function ContactForm() {

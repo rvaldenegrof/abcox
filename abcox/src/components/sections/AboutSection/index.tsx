@@ -8,7 +8,7 @@ const highlights = [
   "Garantía de 3 meses en mano de obra",
   "Repuestos originales o de primera calidad",
   "Atención personalizada y transparente",
-  "Cobertura en más de 30 comunas de Santiago",
+  "Cobertura en Quilpué, Villa Alemana, Viña del Mar y alrededores",
 ]
 
 export function AboutSection() {
@@ -47,8 +47,7 @@ export function AboutSection() {
           </p>
           <h3 className="mb-4 text-2xl font-bold">Llegamos a tu hogar</h3>
           <p className="mb-6 text-blue-100">
-            Cubrimos más de 30 comunas del Gran Santiago. Contáctanos para verificar
-            disponibilidad en tu sector.
+            Atendemos Quilpué, Villa Alemana, Viña del Mar, Valparaíso, Concón, Limache, Olmué y comunas cercanas. Contáctanos para verificar disponibilidad en tu sector.
           </p>
           <div className="rounded-xl bg-white/10 p-4 text-center text-blue-200 text-sm backdrop-blur-sm">
             {/* Placeholder: reemplazar con Google Maps Embed */}
