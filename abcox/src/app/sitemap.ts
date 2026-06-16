@@ -1,4 +1,6 @@
 import { MetadataRoute } from "next"
+
+export const dynamic = "force-static"
 import { siteConfig } from "@/config/site"
 import { services } from "@/config/services"
 
