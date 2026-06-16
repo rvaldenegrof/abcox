@@ -1,13 +1,20 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Plus_Jakarta_Sans, DM_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Toaster } from "sonner"
 import { siteConfig } from "@/config/site"
 import "./globals.css"
 
-const inter = Inter({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-heading",
+  weight: ["400", "500", "600", "700", "800"],
+})
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  weight: ["400", "500", "600", "700"],
 })
 
 export const metadata: Metadata = {
@@ -61,7 +68,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es" className={`${inter.variable} scroll-smooth`}>
+    <html lang="es" className={`${plusJakartaSans.variable} ${dmSans.variable} scroll-smooth`}>
       <body className="min-h-screen font-sans antialiased">
         {children}
         <Toaster position="top-center" richColors />
