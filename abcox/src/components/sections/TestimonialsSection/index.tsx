@@ -5,42 +5,42 @@ import { SectionWrapper, SectionHeader } from "@/components/shared/SectionWrappe
 const testimonials = [
   {
     name: "María González",
-    commune: "Las Condes",
+    commune: "Quilpué",
     rating: 5,
     comment:
       "Excelente servicio. El técnico llegó puntual, diagnosticó el problema en minutos y lo solucionó el mismo día. Mi lavadora quedó como nueva.",
   },
   {
     name: "Carlos Rojas",
-    commune: "Providencia",
+    commune: "Villa Alemana",
     rating: 5,
     comment:
       "Muy profesionales. Presupuesto claro, trabajo garantizado y precio justo. Los llamaré nuevamente sin dudarlo.",
   },
   {
     name: "Ana Martínez",
-    commune: "Ñuñoa",
+    commune: "Viña del Mar",
     rating: 5,
     comment:
       "Repararon mi secadora cuando otros servicios decían que había que cambiarla. Honestidad y buen trabajo. 100% recomendados.",
   },
   {
     name: "Roberto Silva",
-    commune: "Santiago Centro",
+    commune: "Valparaíso",
     rating: 5,
     comment:
       "Servicio rápido y eficiente. Coordiné la visita por WhatsApp y al día siguiente ya tenía la lavadora funcionando.",
   },
   {
     name: "Claudia Torres",
-    commune: "Maipú",
+    commune: "Concón",
     rating: 5,
     comment:
       "Los mejores que he encontrado. Técnico muy amable y explicó todo con claridad. La garantía es un plus importante.",
   },
   {
     name: "Felipe Morales",
-    commune: "La Florida",
+    commune: "Limache",
     rating: 5,
     comment:
       "Solución rápida a un problema que tenía hace semanas. Precio razonable y excelente atención. Muy satisfecho.",

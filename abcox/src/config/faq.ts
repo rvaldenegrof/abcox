@@ -17,7 +17,7 @@ export const faqs = [
   {
     question: "¿Qué comunas tienen cobertura?",
     answer:
-      "Cubrimos más de 30 comunas del Gran Santiago. Contáctanos directamente para confirmar cobertura en tu sector.",
+      "Atendemos Quilpué, Villa Alemana, Viña del Mar, Valparaíso, Concón, Limache, Olmué, Peñablanca y comunas cercanas de la Región de Valparaíso. Contáctanos para confirmar cobertura en tu sector.",
   },
   {
     question: "¿Trabajan con todas las marcas?",

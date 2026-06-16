@@ -25,7 +25,7 @@ export function HeroSection() {
 
           <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
             Más de {siteConfig.yearsOfExperience} años entregando soluciones rápidas y
-            garantizadas. Atención a domicilio en más de 30 comunas de Santiago.
+            garantizadas. Atención a domicilio en Quilpué, Villa Alemana, Viña del Mar y toda la Región de Valparaíso.
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
